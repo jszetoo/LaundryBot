@@ -1,4 +1,4 @@
-# FilamentBot
+# LaundryBot
 This repository contains the codes required for the LaundryBot smart liquid sensor project powered by Amazon DRS
 
 # Project page
