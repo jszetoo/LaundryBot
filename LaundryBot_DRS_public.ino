@@ -61,7 +61,7 @@ void setup()
   Serial.begin(9600);
   Wire.begin();
 
- sensor.init();
+  sensor.init();
   sensor.configureDefault();
 
   // Reduce range max convergence time and ALS integration
@@ -70,8 +70,6 @@ void setup()
   // limits (10 Hz operation)") in the datasheet).
   sensor.writeReg(VL6180X::SYSRANGE__MAX_CONVERGENCE_TIME, 30);
   sensor.writeReg16Bit(VL6180X::SYSALS__INTEGRATION_PERIOD, 50);
-
-  sensor.setTimeout(500);
 
    // stop continuous mode if already active
   sensor.stopContinuous();
@@ -127,8 +125,7 @@ void setup()
 
   delay(2000);
   lcd.clear();
-  checkDir();
-  mouse_init();
+
 }
 
 void printWifiStatus() {
